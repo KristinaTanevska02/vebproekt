@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Your head content goes here -->
+  </head>
+  <body>
+    <table id="parent">
+      <tr id="child">
+        <td>data</td>
+      </tr>
+    </table>
+
+    <script>
+      window.onload = function() {
+        var parent = document.getElementById("parent");
+        var child = document.getElementById("child");
+
+        console.log("Parent:", parent);
+        console.log("Child:", child);
+
+        var newrow = document.createElement("tr");
+        newrow.innerHTML = "<td>data2</td>";
+
+        // Use the parent element to insert the new row before the child element
+        parent.insertBefore(newrow, child);
+      };
+    </script>
+  </body>
+</html>
